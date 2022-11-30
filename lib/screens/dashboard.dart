@@ -12,7 +12,7 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  // var token = LocalStorage().fetchToken().toString();
+  var token = LocalStorage().fetchToken().toString();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,8 +20,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
         title: const Text("Dashboard"),
         actions:  [GestureDetector(onTap:(){LocalStorage().logoff(); Navigator.push(context, MaterialPageRoute(builder: (context)=> const SplashScreen()));}, child: const Icon(Icons.exit_to_app))],
       ),
-      body: const Center(
-        child: Text("Welcome"),
+      body:  Center(
+        child: Text(token),
       ),
     );
   }
