@@ -25,7 +25,6 @@ class _HomeScreenState extends State<HomeScreen> {
   };
   final response = await http.post(Uri.parse("https://reqres.in/api/login/"), body: data);
   if(response.statusCode == 200){
-    print(response.body);
     var data =jsonDecode(response.body);
      LocalStorage().storeToken(data['token']);
      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const DashboardScreen()));

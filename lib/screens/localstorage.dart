@@ -6,10 +6,10 @@ class LocalStorage{
     var storaged = await SharedPreferences.getInstance();
     await storaged.setString("auth_token", jsonEncode(token));
   }
-  Future<String?> fetchToken() async{
-    final storaged = await SharedPreferences.getInstance();
-    return storaged.getString(jsonDecode("auth_token"));
-  }
+  // Future<String?> fetchToken() async{
+  //   final storaged = await SharedPreferences.getInstance();
+  //   return storaged.getString(jsonDecode("auth_token"));
+  // }
 
   logoff() async{
     final storaged = await SharedPreferences.getInstance();
