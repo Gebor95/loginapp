@@ -31,6 +31,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
       if (data['status'] == "OK") {
         LocalStorage().storeToken(emailController.text);
+       // LocalStorage().storeusername(emailController.text);
+        // LocalStorage().storepassword(pwordController.text);
         //   Navigator.pushReplacement(context,
         //       MaterialPageRoute(builder: (context) => const DashboardScreen()));
         // }
